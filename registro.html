@@ -1,0 +1,77 @@
+<!DOCTYPE html> 
+<html>
+  <head lang="es">
+    <meta charset="utf-8" />
+    <title>Inscripcion de alumnos</title>
+    <link href="css/bootstrap.css" rel="stylesheet" >
+    <script languaje="javascript" src="js/check.js"></script>
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="navbar-inner">
+	<a class="brand" href="http://aztli.cs.buap.mx">Aztli</a>
+	<ul class="nav">
+	  <li class="active"><a href="#">Inscripcion</a></li>
+	  <li><a href="http://sourceforge.net/projects/aztlignulinux/">Descargas</a></li>
+	</ul>
+      </div>
+    </div>
+
+    <form id="register"  name="register" action="/uploads" method="post" enctype="multipart/form-data" class="form-horizontal">
+      <div id="divname" class="control-group ">
+	<label class="control-label" for="inputName">Nombre</label>
+	<div class="controls">
+	  <input type="text" id="inputname" placeholder="Ramiro">
+	</div>
+      </div>
+      <div class="control-group">
+	<label class="control-label" for="inputlastname">Apellido paterno</label>
+	<div class="controls">
+	  <input type="text" id="inputlastname" placeholder="Perez">
+	</div>
+      </div>
+      <div class="control-group">
+	<label class="control-label" for="inputemail">Email</label>
+	<div class="controls">
+	  <input type="email" id="inputemail" placeholder="Ramiro_perez@gmail.com">
+	</div>
+      </div>
+      <div class="control-group">
+	<label class="control-label" for="inputsex">Sexo</label>
+	<div class="controls">
+	  <label class="radio inline">
+	    <input type="radio" name="selectsex" id="woman" value="woman" checked>
+	    Femenino
+
+	  </label>
+	  <label class="radio inline" >
+	    <input type="radio" name="selectsex" id="men" value="men">
+	    Masculino
+	  </label>
+	</div>
+      </div>
+      <div class="control-group">
+	<label class="control-label" for="inputuniv">Universidad</label>
+	<div class="controls">
+	  <input type="text" id="inputuniv" placeholder="BUAP">
+	</div>
+      </div>
+      <div class="control-group">
+	<label class="control-label" for="inputdegree">Carrera</label>
+	<div class="controls">
+	  <input type="text" id="inputdegree" placeholder="Ing. Computacion">
+	</div>
+      </div>
+      <div class="form-actions">
+	<button type="button"  id="send" class="btn btn-primary">Enviar</button>
+	<button type="button"  id="reset" class="btn">Limpiar</button>
+      </div>
+</div>
+</form>
+<footer>
+  <address>
+    <a href="mailto:os.aioria@gmail.com">Miguel Angel Gordian</a>
+  </address>
+</footer>
+</body>
+</html>
