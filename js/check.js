@@ -22,7 +22,8 @@ function usercheck(){
     // console.log(userbool) // Comenzamos con el habito de debuguear con
                              // console.log()
 
-    color_status(userbool,
+    color_status((user.value != null) && userbool && 
+		 !(/^\s+$/.test(user.value)),
 		 user.parentNode.parentNode);
 
     return userbool;
@@ -33,7 +34,8 @@ function lastnamecheck(){
     var lastname = document.getElementById("inputlastname")
     var lastnamebool = lastname.value.length > 2
 
-    color_status(lastnamebool,
+    color_status((lastname.value != null) && lastnamebool && 
+		 !(/^\s+$/.test(lastname.value)),
 		 lastname.parentNode.parentNode);
 
     return (lastname.value.length > 2);
@@ -80,7 +82,8 @@ function univcheck(){
     var univ = document.getElementById("inputuniv");
     var univbool = univ.value.length > 2;
 
-    color_status(univbool,
+    color_status((univ.value != null) && univbool && 
+		 !(/^\s+$/.test(univ.value)),
 		 univ.parentNode.parentNode);
 
     return (univ.value.length > 2);
@@ -90,7 +93,9 @@ function degreecheck(){
     // validacion de carrera
     var degree = document.getElementById("inputdegree");
     var degreebool = degree.value.length > 6;
-    color_status(degreebool,
+
+    color_status((degree.value != null) && degreebool &&
+		 !(/^\s+$/.test(degree.value)),
 		 degree.parentNode.parentNode);
 
     return degreebool;
@@ -105,7 +110,8 @@ function limpiatodo(){
      * los dueños del drama.
      */
 
-    items = ["inputname","inputlastname","inputemail","inputuniv","inputdegree"]
+    items = ["inputname","inputlastname","inputemail",
+	     "inputuniv","inputdegree"]
 
     for (item=0; item < items.length; item++) {
 	tmpelement = document.getElementById(items[item]);
